@@ -3,7 +3,7 @@ from constants import BASE_URL, APP_ACCESS_TOKEN
 from get_user_post import get_user_post
 username="vineet_chauhan9"
 
-def post_a_comment(insta_username):
+def comment_user_post(insta_username):
     media_id = get_user_post(insta_username)
     print media_id
     message = raw_input("Enter your Message: ")
@@ -15,4 +15,4 @@ def post_a_comment(insta_username):
         print "Post comment Successfully"
     else:
         print "Unable to comment on post"
-post_a_comment(username)
+comment_user_post(username)
