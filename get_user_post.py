@@ -21,7 +21,9 @@ def get_user_post(insta_username):
             image_url = user_media['data'][0]['images']['standard_resolution']['url']
             urllib.urlretrieve(image_url, image_name)
             return user_media['data'][0]['id']
+            print user_media['data'][0]['id']
         else:
             print "There is no recent post!"
     else:
         print 'Status code other than 200 received!'
+#get_user_post(insta_username="dograsandeep_")
