@@ -15,4 +15,4 @@ def comment_user_post(insta_username):
         print "Post comment Successfully"
     else:
         print "Unable to comment on post"
-comment_user_post(username)
+#comment_user_post(username)
