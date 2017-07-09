@@ -1,4 +1,4 @@
-from constants import APP_ACCESS_TOKEN,BASE_URL
+from instabot import APP_ACCESS_TOKEN,BASE_URL
 import requests
 from get_user_post import get_user_post
 from textblob import TextBlob

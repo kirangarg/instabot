@@ -1,5 +1,5 @@
 import requests
-from constants import BASE_URL, APP_ACCESS_TOKEN
+from instabot import BASE_URL, APP_ACCESS_TOKEN
 from get_user_post import get_user_post
 username="vineet_chauhan9"
 
