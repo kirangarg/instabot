@@ -2,6 +2,7 @@ import requests
 import urllib
 from instabot import APP_ACCESS_TOKEN, BASE_URL
 from get_user_id import get_user_id
+#username = "vineet_chauhan9"
 
 def get_user_post(insta_username):
     #function logic
@@ -26,4 +27,4 @@ def get_user_post(insta_username):
             print "There is no recent post!"
     else:
         print 'Status code other than 200 received!'
-#get_user_post(insta_username="dograsandeep_")
+#get_user_post(username)

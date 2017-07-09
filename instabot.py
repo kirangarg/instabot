@@ -10,9 +10,9 @@ from get_user_info import *
 from get_own_post import *
 from delete_bad_comment import *
 from comment_user_post import *
+
 def start_bot():
     while True:
-        print "\n"
         print "Welcome to instaBot!\n"
         print "Menu options:\n"
         print "1.Get your own details\n"
@@ -32,27 +32,27 @@ def start_bot():
         elif choice == 2:
             insta_username = raw_input("Enter the username of the user: ")
             get_user_info(insta_username)
-        elif choice == "3":
+        elif choice == 3:
             get_own_post()
-        elif choice == "4":
+        elif choice == 4:
             insta_username = raw_input("Enter the username of the user: ")
             get_user_post(insta_username)
-       #elif choice=="5":
+       #elif choice==5:
           #insta_username = raw_input("Enter the username of the user: ")
           #get_like_list(insta_username)
-        elif choice=="6":
+        elif choice==6:
            insta_username = raw_input("Enter the username of the user: ")
            like_user_post(insta_username)
-        #lif choice=="7":
+        #lif choice==7:
          # insta_username = raw_input("Enter the username of the user: ")
           #get_comment_list(insta_username)
-        elif choice=="8":
+        elif choice==8:
            insta_username = raw_input("Enter the username of the user: ")
            comment_user_post(insta_username)
-        elif choice=="9":
+        elif choice==9:
            insta_username = raw_input("Enter the username of the user: ")
            delete_bad_comment(insta_username)
-        elif choice == "10":
+        elif choice == 10:
             exit()
         else:
             print "wrong choice"
