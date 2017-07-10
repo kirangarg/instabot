@@ -1,6 +1,7 @@
 import requests
 from instabot import APP_ACCESS_TOKEN,BASE_URL
 from get_user_id import get_user_id
+user_name = "vineet_chauhan9"
 def get_user_info(insta_username):
     #function logic
     user_id = get_user_id(insta_username)
@@ -20,3 +21,4 @@ def get_user_info(insta_username):
             print 'There is no data for this user!'
     else:
         print 'Status code other than 200 received!'
+get_user_id(user_name)
