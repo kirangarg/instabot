@@ -1,5 +1,5 @@
 import requests
-from instabot import APP_ACCESS_TOKEN,BASE_URL
+from instabot import BASE_URL,APP_ACCESS_TOKEN
 #from get_user_post import get_user_post
 from get_user_post import get_user_post
 

@@ -14,9 +14,10 @@ def get_own_post():
             image_name = own_media['data'][0]['id'] + '.jpeg'
             image_url = own_media['data'][0]['images']['standard_resolution']['url']
             urllib.urlretrieve(image_url, image_name)
-            return own_media['data'][0]['id']
+            print  own_media['data'][0]['id']
             print 'Your image has been downloaded!'
+            return own_media['data'][0]['id']
         else:
             print 'Post does not exist!'
     else:
-        print 'Status code other than 20 received!'
+        print 'Status code other than 200 received!'
