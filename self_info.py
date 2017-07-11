@@ -1,5 +1,5 @@
 import requests
-from instabot import BASE_URL,APP_ACCESS_TOKEN
+from constant import BASE_URL,APP_ACCESS_TOKEN
 def self_info():
     #logic of the function
     request_url = (BASE_URL + 'users/self/?access_token=%s') % (APP_ACCESS_TOKEN)
@@ -16,3 +16,5 @@ def self_info():
             print 'User does not exist!'
     else:
         print 'Status code other than 200 received!'
+
+#self_info for user kirangarg95

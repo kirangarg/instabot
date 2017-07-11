@@ -1,11 +1,3 @@
-#all global variables are here
-import requests
-import urllib
-#instagram api access token
-APP_ACCESS_TOKEN = '2008525763.b4eff92.5d4acde85c564413bce58eb73cc55d84'
-#instagram api base url
-BASE_URL = 'https://api.instagram.com/v1/'
-
 from self_info import *
 from get_user_info import *
 from get_own_post import *
@@ -13,11 +5,15 @@ from get_user_post import *
 from like_user_post import *
 from comment_user_post import *
 from delete_bad_comment import *
+from like_list import *
+from comment_list import *
+#importing function files
 
 
 
-def start_bot():
+def insta_bot():
     while True:
+        #provide choices
         print "Welcome to instaBot!"
         print "Menu options:"
         print "1.Get your own details"
@@ -26,8 +22,10 @@ def start_bot():
         print "4.Get the recent post of a user by username"
         print "5.Like the recent post of a user"
         print "6.Make a comment on the recent post of a user"
-        print "7.delete bad comment on recent post"
-        print "8.Exit"
+        print "7.list of likes on recent post of a user"
+        print "8.list of comments on a recnet post of a user"
+        print "9.delete bad comment on recent post"
+        print "10.Exit"
 
         choice = int(raw_input("Enter you choice: "))
         if choice == 1:
@@ -47,11 +45,16 @@ def start_bot():
            user_name = raw_input("Enter the username of the user: ")
            comment_user_post(user_name)
         elif choice == 7:
+           user_name = raw_input("Enter the username of the user: ")
+           like_list(user_name)
+        elif choice == 8:
+            user_name = raw_input("Enter the username of the user: ")
+            comment_list(user_name)
+        elif choice == 9:
             user_name = raw_input("Enter the username of the user: ")
             delete_bad_comment(user_name)
-        elif choice == 8:
+        elif choice == 10:
             exit()
         else:
             print "wrong choice"
 
-start_bot()

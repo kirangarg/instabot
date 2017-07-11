@@ -1,6 +1,6 @@
 import requests
 import urllib
-from instabot import BASE_URL, APP_ACCESS_TOKEN
+from constant import BASE_URL, APP_ACCESS_TOKEN
 
 def get_own_post():
     #function logic
@@ -21,3 +21,5 @@ def get_own_post():
             print 'Post does not exist!'
     else:
         print 'Status code other than 200 received!'
+
+#get_own_post of kirangarg95

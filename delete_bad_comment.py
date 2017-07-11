@@ -1,9 +1,8 @@
-from instabot import APP_ACCESS_TOKEN,BASE_URL
+from constant import APP_ACCESS_TOKEN,BASE_URL
 import requests
 from get_user_post import get_user_post
 from textblob import TextBlob
 from textblob.sentiments import NaiveBayesAnalyzer
-username="kirangarg95"
 
 def delete_bad_comment(insta_username):
     media_id = get_user_post(insta_username)
@@ -13,7 +12,6 @@ def delete_bad_comment(insta_username):
 
     if comment_info['meta']['code'] == 200:
         if len(comment_info['data']):
-            #Here's a naive implementation of how to delete the negative comments :)
             for x in range(0, len(comment_info['data'])):
                 comment_id = comment_info['data'][x]['id']
                 comment_text = comment_info['data'][x]['text']
@@ -34,6 +32,7 @@ def delete_bad_comment(insta_username):
             print 'There are no existing comments on the post!'
     else:
         print 'Status code other than 200 received!'
+
 #delete_bad_comment(username)
 
 
